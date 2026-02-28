@@ -1,0 +1,63 @@
+@EmailSim_HostAddress = http://localhost:5227
+
+### Get stats (emailCount, agentCount, totalCount, maxLimit)
+GET {{EmailSim_HostAddress}}/api/stats
+
+### Get pending emails (dequeues and returns new emails)
+GET {{EmailSim_HostAddress}}/api/emails/pending
+
+### Reset counts (歸零後 Game Loop 恢復)
+POST {{EmailSim_HostAddress}}/api/reset
+
+### Click check - FakeLink 虛假連結
+POST {{EmailSim_HostAddress}}/api/email/click
+Content-Type: application/json
+
+{
+  "sender": "info@paypal-support.org",
+  "subject": "收到一筆新的付款",
+  "content": "您收到一筆 $500 USD 的付款...",
+  "isPhishing": true,
+  "type": 1,
+  "warningMessage": ""
+}
+
+### Click check - UrgentThreat 威脅語氣
+POST {{EmailSim_HostAddress}}/api/email/click
+Content-Type: application/json
+
+{
+  "sender": "no-reply@hsbc-secure-mail.com",
+  "subject": "您的帳戶已被暫時鎖定",
+  "content": "偵測到異常活動...",
+  "isPhishing": true,
+  "type": 2,
+  "warningMessage": ""
+}
+
+### Click check - GiftScam 中獎詐騙
+POST {{EmailSim_HostAddress}}/api/email/click
+Content-Type: application/json
+
+{
+  "sender": "rewards@apple-store.com",
+  "subject": "恭喜！您獲得了一台 iPhone 16 Pro",
+  "content": "您被選為本月幸運用戶...",
+  "isPhishing": true,
+  "type": 3,
+  "warningMessage": ""
+}
+
+### Click check - safe email
+POST {{EmailSim_HostAddress}}/api/email/click
+Content-Type: application/json
+
+{
+  "sender": "library@cityu.edu.hk",
+  "subject": "圖書逾期通知",
+  "content": "您借閱的《Data Structures》已逾期...",
+  "isPhishing": false,
+  "type": 0
+}
+
+###
