@@ -1,7 +1,7 @@
 **Project Overview**:
 
 **The Problem We Saw:**
-Age between 8 to 12 years old kids are curious to everything they saw, and parents are busy. When handed a phone or tablet, children enter a world full of strangers, scams, and hidden dangers. A "fun" link can lead to a phishing site. A "friendly" stranger might be a predator.
+Age between 8 to 12 years old kids are curious to everything they see, and parents are busy. When handed a phone or tablet, children enter a world full of strangers, scams, and hidden dangers. A "fun" link can lead to a phishing site. A "friendly" stranger might be a predator.
 Telling kids "be careful" isn't enough. They need to see the danger, experience it, and learn from it before it’s real.
 
 **Our Solution:**
